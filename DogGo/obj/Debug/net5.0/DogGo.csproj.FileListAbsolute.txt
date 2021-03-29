@@ -428,3 +428,7 @@ C:\Users\pazia\workspace\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Owners\Create.
 C:\Users\pazia\workspace\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Owners\Delete.cshtml.g.cs
 C:\Users\pazia\workspace\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Owners\Edit.cshtml.g.cs
 C:\Users\pazia\workspace\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Index.cshtml.g.cs
+C:\Users\pazia\workspace\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Create.cshtml.g.cs
+C:\Users\pazia\workspace\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Details.cshtml.g.cs
+C:\Users\pazia\workspace\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Delete.cshtml.g.cs
+C:\Users\pazia\workspace\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Edit.cshtml.g.cs

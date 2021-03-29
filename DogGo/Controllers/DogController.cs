@@ -25,7 +25,7 @@ namespace DogGo.Controllers
             return View(dogs);
         }
 
-        // GET: OwnersController/Details/5
+        
         public ActionResult Details(int id)
         {
             Dog dog = _dogRepo.GetDogById(id);
@@ -36,6 +36,78 @@ namespace DogGo.Controllers
             }
 
             return View(dog);
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Dog dog)
+        {
+            try
+            {
+                _dogRepo.AddDog(dog);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                return View(dog);
+            }
+        }
+
+
+        public ActionResult Edit(int id)
+        {
+            Dog dog = _dogRepo.GetDogById(id);
+
+            if (dog == null)
+            {
+                return NotFound();
+            }
+
+            return View(dog);
+        }
+
+        // POST: OwnersController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, Dog dog)
+        {
+            try
+            {
+                _dogRepo.UpdateDog(dog);
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                return View(dog);
+            }
+        }
+
+
+        // GET: OwnersController/Delete/5
+        public ActionResult Delete(int id)
+        {
+            Dog dog = _dogRepo.GetDogById(id);
+            return View(dog);
+        }
+        // POST: OwnersController/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id, Dog dog)
+        {
+            try
+            {
+                _dogRepo.DeleteDog(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                return View(dog);
+            }
         }
     }
 }
